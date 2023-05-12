@@ -21,4 +21,3 @@ We propose a platform that connects aircraft manufacturers, airlines, and recycl
 
 ## Conclusion
 The Aircraft Components Repurposing and Recycling Platform is an innovative solution that can help reduce the aviation industry's carbon footprint. With its user-friendly interface and robust features, the platform can streamline the process of repurposing and recycling end-of-life aircraft components.
-=======

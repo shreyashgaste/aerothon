@@ -7,6 +7,10 @@ The aviation industry is a significant contributor to global emissions, and it i
 ## Solution
 We propose a platform that connects aircraft manufacturers, airlines, and recycling facilities to facilitate the repurposing and recycling of end-of-life aircraft components. The platform will enable aircraft manufacturers and airlines to list their end-of-life components, and recycling facilities can bid on them. The platform will also provide a communication channel for all the parties involved to discuss the logistics of transporting the components to the recycling facilities.
 
+## Flowchart
+
+![Flowchart](https://github.com/shreyashgaste/aerothon/assets/74046803/1b6181eb-2343-4cea-aea5-285385627bba)
+
 ## Tech Stack
 * React.js
 * Node.js

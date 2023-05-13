@@ -22,8 +22,33 @@ function ProjectList({ projects, onSave }) {
   //       ))}
   //     </ul>
   //   );
-  const items = projects.map((project, id) => (
-    <div key={id} className="cols-sm" style={{margin: "auto"}}>
+  // const items = projects.map((project, id) => (
+  //   function getOnCondition() {
+
+
+   
+  //   <div key={id} className="cols-sm" style={{margin: "auto"}}>
+  //     {projectBeingEdited === project ? (
+  //       // <ProjectForm
+  //       //   project={project}
+  //       //   onSave={onSave}
+  //       //   onCancel={cancelEditing}
+  //       // />
+  //       <></>
+  //     ) : (
+  //       <ProjectCard project={project} onEdit={handleEdit} />
+  //     )}
+  //   </div>
+  //     }
+  //     getOnCondition();
+  // ));
+
+  const items = projects.map(getOnCondition)
+  function getOnCondition(project) {
+
+    if(project=== undefined) return;
+    return (
+    <div className="cols-sm" style={{margin: "auto"}}>
       {projectBeingEdited === project ? (
         // <ProjectForm
         //   project={project}
@@ -34,8 +59,8 @@ function ProjectList({ projects, onSave }) {
       ) : (
         <ProjectCard project={project} onEdit={handleEdit} />
       )}
-    </div>
-  ));
+    </div>)
+      }
   return <div className="row">{items}</div>;
 }
 

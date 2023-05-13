@@ -26,7 +26,7 @@ function ProjectCard(props) {
           <p>Material Composition : {project.materialComposition}</p>
           <p>Age : {project.age} Years</p>
           <p>Condition : {project.condition}</p>
-          <p>Location : {project.location}</p>
+          <p>Carbon Footprint Saved : {project.carbonFootprintSaved}</p>
           <p>Manufacturer : {project.manufacturer}</p>
           
         

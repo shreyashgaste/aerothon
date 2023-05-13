@@ -60,6 +60,110 @@ const projectAPI = {
       });
   },
 
+  getEngineBasedOnCO2Footprint(page = 1, limit = 20) {
+    return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=+carbonFootprintSaved`)
+      .then(delay(600))
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((projects) => {
+        return projects.map((p) => {
+          if(p !== undefined && p.partName === "Engine")       
+            return new Project(p);
+          else
+            console.log(p, "unn")
+        });
+      })
+      .catch((error) => {
+        console.log('log client error ' + error);
+        throw new Error(
+          'There was an error retrieving the projects. Please try again.'
+        );
+      });
+  },
+
+  getWingBasedOnCO2Footprint(page = 1, limit = 20) {
+    return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=+carbonFootprintSaved`)
+      .then(delay(600))
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((projects) => {
+        return projects.map((p) => {
+          if(p !== undefined && p.partName === "Wing")       
+            return new Project(p);
+          else
+            console.log(p, "unn")
+        });
+      })
+      .catch((error) => {
+        console.log('log client error ' + error);
+        throw new Error(
+          'There was an error retrieving the projects. Please try again.'
+        );
+      });
+  },
+  getLandingGearBasedOnCO2Footprint(page = 1, limit = 20) {
+    return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=+carbonFootprintSaved`)
+      .then(delay(600))
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((projects) => {
+        return projects.map((p) => {
+          if(p !== undefined && p.partName === "Landing Gear")       
+            return new Project(p);
+          else
+            console.log(p, "unn")
+        });
+      })
+      .catch((error) => {
+        console.log('log client error ' + error);
+        throw new Error(
+          'There was an error retrieving the projects. Please try again.'
+        );
+      });
+  },
+
+  getAvionicsBasedOnCO2Footprint(page = 1, limit = 20) {
+    return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=+carbonFootprintSaved`)
+      .then(delay(600))
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((projects) => {
+        return projects.map((p) => {
+          if(p !== undefined && p.partName === "Avionics")       
+            return new Project(p);
+          else
+            console.log(p, "unn")
+        });
+      })
+      .catch((error) => {
+        console.log('log client error ' + error);
+        throw new Error(
+          'There was an error retrieving the projects. Please try again.'
+        );
+      });
+  },
+
+  getFuselageBasedOnCO2Footprint(page = 1, limit = 20) {
+    return fetch(`${url}?_page=${page}&_limit=${limit}&_sort=+carbonFootprintSaved`)
+      .then(delay(600))
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((projects) => {
+        return projects.map((p) => {
+          if(p !== undefined && p.partName === "Fuselage")       
+            return new Project(p);
+          else
+            console.log(p, "unn")
+        });
+      })
+      .catch((error) => {
+        console.log('log client error ' + error);
+        throw new Error(
+          'There was an error retrieving the projects. Please try again.'
+        );
+      });
+  },
+
   put(project) {
     return fetch(`${url}/${project.id}`, {
       method: 'PUT',
